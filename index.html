@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aventura 16 Bits</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section>
+        <h1>Aventura 16 Bits</h1>
+        <p>
+          Mueve al héroe con <strong>WASD</strong> o <strong>flechas</strong>.
+          En celular usa los botones. Junta todos los cristales.
+        </p>
+        <canvas id="game" width="320" height="180" aria-label="Juego pixel art"></canvas>
+
+        <div class="touch-controls" aria-label="Controles táctiles">
+          <button class="ctrl up" data-dir="up" aria-label="Arriba">▲</button>
+          <button class="ctrl left" data-dir="left" aria-label="Izquierda">◀</button>
+          <button class="ctrl down" data-dir="down" aria-label="Abajo">▼</button>
+          <button class="ctrl right" data-dir="right" aria-label="Derecha">▶</button>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <h2>Estado</h2>
+        <p>Tiempo: <span id="time">0.0s</span></p>
+        <p>Cristales: <span id="score">0 / 0</span></p>
+        <p id="message">Presiona una dirección para empezar.</p>
+        <button id="restart" type="button">Reiniciar partida</button>
+      </aside>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
